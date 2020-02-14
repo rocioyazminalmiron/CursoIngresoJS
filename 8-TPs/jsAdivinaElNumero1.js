@@ -13,8 +13,11 @@ var contadorIntentos;
 function comenzar()
 {
 	//Genero el número RANDOM entre 1 y 100
+	numeroSecreto=Math.floor(Math.random() * 100)+1;     // returns a random integer from 0 to 99
 	 
 		//alert(numeroSecreto );
+		console.log(numeroSecreto);
+
 	
 
 }
@@ -22,5 +25,22 @@ function comenzar()
 function verificar()
 {
 	
-	
+	var numeroIngresado;
+	numeroIngresado=document.getElementById('numero').value;
+	numeroIngresado=parseInt(numeroIngresado);
+
+	if (numeroIngresado==numeroSecreto)
+	 {
+	 	alert("sos un genio");
+	 }
+	 else
+	 {
+	 	if (numeroIngresado>numeroSecreto) 
+	 	{
+            alert("te pasaste");
+
+	 	}
+	 }
+
+
 }
